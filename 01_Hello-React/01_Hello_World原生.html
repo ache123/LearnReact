@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2 class="title"></h2>
+    <button class="btn">改变文本</button>
+
+    <script>
+
+        //命令式编程：每做一个操作，都是给计算机（浏览器）一步步命令
+        let message = "Hello World";
+
+        const titleEl = document.getElementsByClassName("title")[0];
+        titleEl.innerHTML = message;
+
+        const btnEl = document.getElementsByClassName("btn")[0];
+        btnEl.addEventListener("click", e => {
+            message = "Hello React";
+            titleEl.innerHTML = message;
+            console.log("按钮发生了点击");
+        })
+    </script>
+
+</body>
+</html>
