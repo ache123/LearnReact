@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app"></div>
+
+  <script src="../react/react.development.js"></script>
+  <script src="../react/react-dom.development.js"></script>
+  <script src="../react/babel.min.js"></script>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor() {
+        super();
+
+        this.state = {
+          message: "你好啊",
+          counter: 100
+        }
+
+        //  方案二：在构造器中绑定 
+        this.btnClick = this.btnClick.bind(this);
+      }
+
+      render() {
+        return (
+          <div>
+            {/* 方案一：bind绑定this(显式绑定) */}
+            <button onClick={this.btnClick.bind(this)}>按钮</button>
+
+            {/* 方案二 */}
+            {/* 
+              这里的btnClick不用加后面的括号
+              onclick接收的是一个函数，而不是函数调用
+              加()指调用这个方法
+            */}
+            <button onClick={this.btnClick}>按钮</button>
+
+            {/* 方案三：定义函数时，使用箭头函数 */}
+            <button onClick={this.increment}>+1</button>
+            <h2>{this.state.counter}</h2>
+
+            {/* 方案四（推荐）：直接传入一个箭头函数，在箭头函数体中调用需要执行的函数，隐式绑定 */}
+            <button onClick={() => { this.decrement("ch") }}>-1</button>
+
+          </div>
+        )
+
+      }
+
+      btnClick() {
+        console.log(this.state.message)
+      } 
+
+      // 方案三：使用箭头函数，箭头函数中永远不绑定this，其中使用的变量会层级向上找
+      // ES6中给对象增加属性，class fields
+      increment = () => {
+        console.log(this);
+
+        // 这里加减没有用，只能改变当前的counter，不能改变state中的
+        // this.state.counter += 1;
+
+        this.setState({
+          counter: this.state.counter + 1
+        })
+      }
+
+      decrement(name) {
+        console.log(name);
+        this.setState({
+          counter: this.state.counter - 1
+        })
+      }
+    }
+
+
+
+    ReactDOM.render(<App />, document.getElementById("app"));
+  </script>
+</body>
+
+</html>

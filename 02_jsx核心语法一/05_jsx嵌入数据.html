@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app"></div>
+
+  <script src="../react/react.development.js"></script>
+  <script src="../react/react-dom.development.js"></script>
+  <script src="../react/babel.min.js"></script>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor() {
+        super();
+
+        this.state = {
+          // 在{}中能正常显示的内容   String、Number、Array
+          name: "ch",
+          age: 18,
+          names: ['aaa', 'bbb', 'ccc'],
+
+          // 在{}中不能显示（忽略）null, undefined, boolean
+          test1: null,
+          test2: undefined,
+          test3: true,
+          flag: true,
+
+          // 对象不能作为jsx的子类
+          info: {
+            name: "kobe",
+            age: 40
+          }
+        }
+      }
+
+      render() {
+        return (
+          <div>
+            <h2>{this.state.name}</h2>
+            <h2>{this.state.age}</h2>
+            <h2>{this.state.names}</h2>
+
+            <h2>{this.state.test1}</h2>
+            <h2>{this.state.test2}</h2>
+            <h2>{this.state.test3}</h2>
+
+            <h2>{this.state.flag ? "你好啊" : null}</h2>
+            <h2>{this.state.flag && "你好啊"}</h2>
+
+
+            {/* 让它们在jsx中显示 */}
+            <h2>{this.state.test1 + ""}</h2>
+            <h2>{this.state.test2 + ""}</h2>
+            <h2>{this.state.test3.toString()}</h2>
+
+            <h2>{this.state.info}</h2>
+          </div>
+        )
+
+      }
+    }
+
+
+
+    ReactDOM.render(<App />, document.getElementById("app"));
+  </script>
+</body>
+
+</html>

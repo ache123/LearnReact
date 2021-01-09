@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app"></div>
+
+  <script src="../react/react.development.js"></script>
+  <script src="../react/react-dom.development.js"></script>
+  <script src="../react/babel.min.js"></script>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor() {
+        super();
+
+        this.state = {
+          isLogin: true
+        }
+      }
+
+      render() {
+        const { isLogin } = this.state
+
+        // 1.通过if判断，适合逻辑代码非常多的情况
+        let welcome = null;
+        if (isLogin) {
+          welcome = <h2>欢迎回来</h2>
+        }else {
+          welcome = <h2>再见</h2>
+        }
+
+        return (
+          <div>
+            { welcome }
+
+            {/* 2. 三元运算符*/}
+            <button onClick = { e => this.btnClick() }>{ isLogin ? "退出" : "登录 " }</button>
+
+            <hr/>
+
+            {/* 
+              3. 逻辑与
+              逻辑与在第一个条件不成立时，后面的条件不执行 
+            */}
+            <h2>{ isLogin && "你好啊" }</h2>
+            { isLogin && <h2>你好啊</h2> }
+          </div>
+        )
+
+      }
+
+      btnClick() {
+        this.setState({
+          isLogin: !this.state.isLogin
+        })
+      }
+    }
+
+
+
+    ReactDOM.render(<App />, document.getElementById("app"));
+  </script>
+</body>
+
+</html>
