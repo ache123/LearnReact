@@ -18,7 +18,14 @@ import './04_组件通信的案例/style.css'
 // import App from './06_跨组件通信/01_跨组件通信-props'
 // import App from './06_跨组件通信/02_跨组件通信-context类组件'
 // import App from './06_跨组件通信/03_跨组件通信-context函数组件'
-import App from './06_跨组件通信/04_跨组件通信-多context函数组件'
+// import App from './06_跨组件通信/04_跨组件通信-多context函数组件'
+
+// import App from './07_setState的使用/01_为什么使用setState'
+// import App from './07_setState的使用/02_setState是异步更新'
+// import App from './07_setState的使用/03_setState是同步更新'
+// import App from './07_setState的使用/04_setState数据合并'
+import App from './07_setState的使用/05_setState本身的合并'
+
 
 
 
