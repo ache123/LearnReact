@@ -24,12 +24,26 @@ import './04_组件通信的案例/style.css'
 // import App from './07_setState的使用/02_setState是异步更新'
 // import App from './07_setState的使用/03_setState是同步更新'
 // import App from './07_setState的使用/04_setState数据合并'
+// import App from './07_setState的使用/05_setState本身的合并'
+// import App from './07_setState的使用/06_setState不可变的力量'
+
 
 // import App from './08_react性能优化/01_列表中keys的作用'
 // import App from './08_react性能优化/02_组件嵌套的render调用'
 // import App from './08_react性能优化/03_shouldComponentUpdate'
 // import App from './08_react性能优化/04_pureComponent'
-import App from './08_react性能优化/05_memo的使用'
+// import App from './08_react性能优化/05_memo的使用'
+
+// import App from './09_其他/01_全局事件传递'
+
+// import App from './10_受控和非受控组件/01_refs的使用'
+// import App from './10_受控和非受控组件/02_受控组件的基本使用'
+// import App from './10_受控和非受控组件/03_受控组件select使用'
+// import App from './10_受控和非受控组件/04_受控组件-多输入'
+import App from './10_受控和非受控组件/05_非受控组件的使用'
+
+
+
 
 
 
