@@ -40,9 +40,23 @@ import './04_组件通信的案例/style.css'
 // import App from './10_受控和非受控组件/02_受控组件的基本使用'
 // import App from './10_受控和非受控组件/03_受控组件select使用'
 // import App from './10_受控和非受控组件/04_受控组件-多输入'
-import App from './10_受控和非受控组件/05_非受控组件的使用'
+// import App from './10_受控和非受控组件/05_非受控组件的使用'
+
+// import App from './11_高阶组件的使用/01_高阶组件的定义方式'
+// ReactDOM.render(<App name="ch"/>, document.getElementById('root'));
 
 
+// import App from './11_高阶组件的使用/02_高阶组件的应用-增强props'
+// import App from './11_高阶组件的使用/03_高阶组件的应用-增强props-默认'
+// import App from './11_高阶组件的使用/04_高阶组件的应用-增强props-进阶'
+// import App from './11_高阶组件的使用/05_高阶组件应用-登录鉴权操作(劫持JSX)'
+// import App from './11_高阶组件的使用/06_高阶组件应用-生命周期劫持-默认'
+// import App from './11_高阶组件的使用/07_高阶组件应用-生命周期劫持-增强'
+
+// import App from './12_组件内容补充/01_ref的转发'
+// import App from './12_组件内容补充/02_portals使用'
+// import "./css/index.css"
+import App from './12_组件内容补充/03_fragments的使用'
 
 
 
@@ -53,4 +67,8 @@ import App from './10_受控和非受控组件/05_非受控组件的使用'
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+
+
+
 

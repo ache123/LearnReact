@@ -43,6 +43,8 @@ export default class App extends PureComponent {
       <div>
         {/* <h2 ref=字符串/对象/函数>Hello React</h2> */}
         <h2 ref="titleRef">Hello React</h2>
+
+        
         {/* 目前react推荐的方式 */}
         <h2 ref={this.titleRef}>aaaa</h2>
 
