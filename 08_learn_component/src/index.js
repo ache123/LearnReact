@@ -56,7 +56,8 @@ import './04_组件通信的案例/style.css'
 // import App from './12_组件内容补充/01_ref的转发'
 // import App from './12_组件内容补充/02_portals使用'
 // import "./css/index.css"
-import App from './12_组件内容补充/03_fragments的使用'
+// import App from './12_组件内容补充/03_fragments的使用'
+import App from './12_组件内容补充/04_stricMode使用'
 
 
 
