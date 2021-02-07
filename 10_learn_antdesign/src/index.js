@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import 'moment/locale/zh-cn';
 
 // antd对应的样式
 // import 'antd/dist/antd.css'
