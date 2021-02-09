@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react'
-import About from './pages/About3'
-import Home from './pages/Home3'
+import About from './pages/About4'
+import Home from './pages/Home4'
 
 export default class App extends PureComponent {
   render() {
     return (
       <div>
-        <About/>
         <Home/>
+        <About/>
       </div>
     )
   }
