@@ -4,7 +4,8 @@ import {
   INCREMENT,
   DECREMENT,
   CHANGE_BANNERS,
-  CHANGE_RECOMMENDS
+  CHANGE_RECOMMENDS,
+  FETCH_HOME_MULTIDATA
 } from './constants.js'
 
 
@@ -64,4 +65,10 @@ export const getHomeMultidataAction = (dispatch, getState) => {
     dispatch(changeRecommendsAction(data.recommend.list));
   })
 
+}
+
+
+// redux-saga拦截的action
+export const fetchHomeMultidataAction = {
+  type: FETCH_HOME_MULTIDATA
 }
