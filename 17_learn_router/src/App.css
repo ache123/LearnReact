@@ -1,0 +1,18 @@
+/* a.active {
+  color: red;
+  font-size: 30px;
+} */
+
+a {
+  margin: 0 10px;
+}
+
+a.link-active {
+  color: blue;
+  font-size: 30px;
+}
+
+a.about-active {
+  color: orange;
+  font-size: 20px;
+}
