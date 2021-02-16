@@ -1,0 +1,22 @@
+import React, {useState} from 'react'
+
+export default function CounterHook() {
+  const [count, setCount] = useState(0);
+  function handleBtnClick() {
+    // setCount(count + 10);
+    // setCount(count + 10);
+    // setCount(count + 10);
+    // setCount(count + 10);
+    setCount((prevState) => prevState + 10);
+    setCount((prevState) => prevState + 10);
+    setCount((prevState) => prevState + 10);
+  }
+  return (
+    <div>
+      <h2>当前计数: {count}</h2>
+      <button onClick={e => setCount(count + 1)}>+1</button>
+      <button onClick={e => setCount((prevState) => prevState + 10)}>+10</button>
+      <button onClick={handleBtnClick}>+10</button>
+    </div>
+  )
+}
