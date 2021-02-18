@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js"></script>
+  <script>
+    // Map的使用
+    // const info = {
+    //   name: "aaa",
+    //   age: 30,
+    //   friend: {
+    //     name: "bbb",
+    //     age: 35
+    //   }
+    // }
+
+    // const infoIM = Immutable.Map(info);
+
+    // const obj = infoIM
+    // const infoIM2 = infoIM.set("name", "ccc");
+    // console.log(obj.get("name"))
+    // console.log(infoIM2.get("name"))
+
+    // List使用
+    // const name = ["aaa", "bbb", "ccc"];
+    // const nameIM = Immutable.List(name);
+    // const arr = nameIM.set(0, "ddd");
+    // console.log(nameIM.get(0))
+    // console.log(arr.get(0))
+
+
+    // Map深层全部替换成Immutable
+    const info = {
+      name: "aaa",
+      age: 30,
+      friend: {
+        name: "bbb",
+        age: 35
+      }
+    }
+
+    const infoIM = Immutable.fromJS(info);
+    console.log(infoIM.get("friend"));
+
+  </script>
+</body>
+
+</html>

@@ -25,7 +25,6 @@ class Home extends PureComponent {
   render() {
     return (
       <div>
-        <hr />
         <h1>Home</h1>
         <h2>当前计数：{this.props.counter}</h2>
         <button onClick={e => this.props.increment()}>+1</button>

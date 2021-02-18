@@ -59,7 +59,7 @@ export default function App() {
       {/* <button onClick={e => setShow(!show)}>切换</button> */}
       {/* <MultiEffectHookDemo/> */}
 
-      {/* 4. useEffect */}
+      {/* 4. useContext */}
       {/* <UserContex.Provider value={{name: "ch", age: 10}}>
         <ThmemContex.Provider value={{fontSize: "30px", color: "red"}}>
           <ContextHookDemo/>

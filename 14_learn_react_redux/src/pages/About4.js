@@ -7,10 +7,14 @@ import {
 } from '../store/actionCreators'
 
 function About(props) {
-
+  console.log("About页面传染")
   return (
     <div>
+      <hr />
       <h1>About</h1>
+      {/* <h2>当前计数：{props.counter}</h2> */}
+      <button onClick={e => props.decrement()}>-1</button>
+      <button onClick={e => props.subNumber(5)}>-5</button>
       <h1>Banner</h1>
       <ul>
         {
@@ -34,7 +38,8 @@ function About(props) {
 
 const mapStateToProps = state => ({
   banners: state.banners,
-  recommends: state.recommends
+  recommends: state.recommends,
+  // counter: state.counter
 })
 const mapDispachToProp = dispatch => {
   return {
